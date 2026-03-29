@@ -63,6 +63,7 @@ Or open **Settings → Keyboard → Input Sources** to manage layouts visually.
 The layout appears as **"Tamazight (QWERTY, Latin, Tamamerit)"** in the GNOME input source selector.
 
 <img src="src/5.png" alt="Window" width="400"/>
+
 _Screenshot showing the layout in GNOME input sources._
 
 ---
