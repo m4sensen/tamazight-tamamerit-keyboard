@@ -47,10 +47,10 @@ Tested on **Fedora 49** (Wayland). Should work on Ubuntu/Debian GNOME, openSUSE,
 
 ```bash
 # Clone or download the script
-git clone https://github.com/your-username/tamazight-keyboard.git
-cd tamazight-keyboard
+git clone https://github.com/m4sensen/tamazight-tamamerit-keyboard.git
+cd tamazight-tamamerit-keyboard
 
-bash tamazight-xkb.sh install
+bash main.sh install
 
 ```
 
@@ -81,7 +81,7 @@ The layout appears as **"Tamazight (QWERTY, Latin, Tamamerit)"** in the GNOME in
 ## Uninstallation
 
 ```bash
-bash tamazight-xkb.sh uninstall
+bash main.sh uninstall
 ```
 
 This removes both the XKB files and the entry from GNOME's input sources. Your other layouts remain untouched.
@@ -120,7 +120,7 @@ The layout is then registered in GNOME's input sources using `gsettings`, which 
 
 | File                            | Location     | Purpose                       |
 | ------------------------------- | ------------ | ----------------------------- |
-| `tamazight-kbd.sh`              | Project root | Main install/uninstall script |
+| `main.sh`                       | Project root | Main install/uninstall script |
 | `~/.config/xkb/symbols/ber`     | User XKB dir | Key mapping definitions       |
 | `~/.config/xkb/rules/evdev.xml` | User XKB dir | Layout registration metadata  |
 
