@@ -28,10 +28,10 @@ The layout follows a **QWERTY base** and adds Tamazight-specific characters wher
 | `,` | `,`       | `«`     | French guillemet    |
 | `.` | `.`       | `»`     | French guillemet    |
 
-![[1.png]]
-![[2.png]]
-![[3.png]]
-![[4.png]]
+![Layout 1](src/1.png)
+![Layout 2](src/2.png)
+![Layout 3](src/3.png)
+![Layout 4](src/4.png)
 
 _Visual reference for the key mapping._
 
