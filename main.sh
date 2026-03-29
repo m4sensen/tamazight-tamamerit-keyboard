@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ══════════════════════════════════════════════════════════════════════
 #  Tamazight Keyboard Layout Manager
-#  Layout : Tamazight (QWERTY, Latin, Tamamerit)
+#  Layout : Tamazight (QWERTY, Latin, Tamɛemrit)
 # ══════════════════════════════════════════════════════════════════════
 
 set -euo pipefail
@@ -27,7 +27,7 @@ read -r -d '' SYMBOLS_CONTENT << 'EOF' || true
 default partial alphanumeric_keys
 xkb_symbols "custom" {
 
-    name[Group1] = "Tamazight (QWERTY, Latin, Tamamerit)";
+    name[Group1] = "Tamazight (QWERTY, Latin, Tamɛemrit)";
 
     // Include standard definitions so Shift/Control work normally
     include "pc"
@@ -110,7 +110,7 @@ read -r -d '' RULES_CONTENT << 'EOF' || true
         <variant>
           <configItem>
             <name>custom</name>
-            <description>Tamazight (QWERTY, Latin, Tamamerit)</description>
+            <description>Tamazight (QWERTY, Latin, Tamɛemrit)</description>
           </configItem>
         </variant>
       </variantList>

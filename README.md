@@ -34,8 +34,8 @@ Tested on **Fedora 49** (Wayland). Should work on Ubuntu/Debian GNOME, openSUSE,
 
 ```bash
 # Clone or download the script
-git clone https://github.com/m4sensen/tamazight-tamamerit-keyboard.git
-cd tamazight-tamamerit-keyboard
+git clone https://github.com/m4sensen/tamazight-latin-keyboard.git
+cd tamazight-latin-keyboard
 
 bash main.sh install
 ```
