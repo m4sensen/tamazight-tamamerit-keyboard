@@ -27,8 +27,9 @@ The layout follows a **QWERTY base** and adds Tamazight-specific characters wher
 | `4` | `4`       | `ⵣ`     | Tifinagh Z (U+2D63) |
 | `,` | `,`       | `«`     | French guillemet    |
 | `.` | `.`       | `»`     | French guillemet    |
-
-> **AltGr** = Right Alt key. Hold it while pressing a key to access the third/fourth level characters.
+![[1.png]]![[2.png]]![[3.png]]
+![[4.png]]
+_Visual reference for the key mapping._
 
 ---
 
@@ -51,7 +52,6 @@ git clone https://github.com/m4sensen/tamazight-tamamerit-keyboard.git
 cd tamazight-tamamerit-keyboard
 
 bash main.sh install
-
 ```
 
 The script will:
@@ -61,6 +61,9 @@ The script will:
 3. Add the layout to GNOME's input sources via `gsettings`
 
 No `sudo` needed. Everything installs to your home directory.
+
+![#2](#)
+_Illustration of the installation process._
 
 ---
 
@@ -75,6 +78,9 @@ Super + Space
 Or open **Settings → Keyboard → Input Sources** to manage layouts visually.
 
 The layout appears as **"Tamazight (QWERTY, Latin, Tamamerit)"** in the GNOME input source selector.
+
+![[6.png]]
+_Screenshot showing the layout in GNOME input sources._
 
 ---
 
@@ -111,7 +117,7 @@ The layout is then registered in GNOME's input sources using `gsettings`, which 
 - **QWERTY base** — familiar to anyone typing Latin-script languages, minimal relearning curve.
 - **Phoneme-first placement** — emphatic consonants (`ṣ ḍ ṭ ṛ ẓ`) are on AltGr of their plain equivalents, so muscle memory transfers.
 - **Epsilon (`ɛ`) on `o` and Gamma (`ɣ`) on `v`** — these are positionally unintuitive but chosen to avoid displacing common Latin characters.
-- **Tifinagh Yaz (`ⵣ`) on Shift+4** — a nod to the symbol's cultural significance; easily accessible without displacing number-row logic.
+- **Tifinagh Z (`ⵣ`) on Shift+4** — a nod to the symbol's cultural significance; easily accessible without displacing number-row logic.
 - **`«` and `»` on Shift+`,`/`Shift+.`** — Tamazight publishing often follows French typographic conventions.
 
 ---
@@ -121,7 +127,7 @@ The layout is then registered in GNOME's input sources using `gsettings`, which 
 | File                            | Location     | Purpose                       |
 | ------------------------------- | ------------ | ----------------------------- |
 | `main.sh`                       | Project root | Main install/uninstall script |
-| `~/.config/xkb/symbols/ber`     | User XKB dir | Key mapping definitions       |
+| `~/.config/xkb/symbols/tmz`     | User XKB dir | Key mapping definitions       |
 | `~/.config/xkb/rules/evdev.xml` | User XKB dir | Layout registration metadata  |
 
 ---
@@ -155,3 +161,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 ---
 
 _Made with love for Tamazight. ❤️ⵣ_
+
+```
+
+```
