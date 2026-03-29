@@ -28,7 +28,7 @@ read -r -d '' SYMBOLS_CONTENT << 'EOF' || true
 default partial alphanumeric_keys
 xkb_symbols "custom" {
 
-    name[Group1] = "Tamazight (QWERTY, Latin, Tamamerit)";
+    name[Group1] = "Tamazight (QWERTY, Latin, Tamɛemrit)";
 
     // Include standard definitions so Shift/Control work normally
     include "pc"
@@ -103,7 +103,7 @@ read -r -d '' RULES_CONTENT << 'EOF' || true
       <configItem>
         <name>ber</name>
         <shortDescription>TMZ</shortDescription>
-        <description>Tamazight (QWERTY, Latin, Tamamerit)</description>
+        <description>Tamazight (QWERTY, Latin, Tamɛemrit)</description>
         <languageList><iso639Id>ber</iso639Id></languageList>
       </configItem>
       <variantList>
