@@ -2,23 +2,22 @@
 # ══════════════════════════════════════════════════════════════════════
 #  Tamazight Keyboard Layout Manager
 #  Layout : Tamazight (QWERTY, Latin, Tamamerit)
-#  Fixed Safe Version for Fedora 49 / GNOME (Wayland & X11)
 # ══════════════════════════════════════════════════════════════════════
 
 set -euo pipefail
 
-# ── Colours ──────────────────────────────────────────────────────────
+# ── Colors ──────────────────────────────────────────────────────────
 R='\033[0;31m'  Y='\033[0;33m'  G='\033[0;32m'
 C='\033[0;36m'  B='\033[1;34m'  W='\033[1;37m'  N='\033[0m'
 
 # ── Config ───────────────────────────────────────────────────────────
-LAYOUT_NAME="ber"
+LAYOUT_NAME="tmz"
 VARIANT_NAME="custom"
-# Note: In GNOME, the source is usually 'layout+variant'
+# GNOME requires the layout+variant
 FULL_LAYOUT_ID="${LAYOUT_NAME}+${VARIANT_NAME}"
 
 XKB_DIR="$HOME/.config/xkb"
-SYMBOLS_FILE="$XKB_DIR/symbols/ber"
+SYMBOLS_FILE="$XKB_DIR/symbols/tmz"
 RULES_FILE="$XKB_DIR/rules/evdev.xml"
 GSETTINGS_KEY="org.gnome.desktop.input-sources"
 GSETTINGS_FIELD="sources"
@@ -62,7 +61,7 @@ xkb_symbols "custom" {
     key <AD08> { [ i, I ] };
 
     key <AD09> { [ U025B, U0190 ] }; // ɛ Ɛ
-    key <AD10> { [ U1E25, U1E24 ] }; // ḥ Ḥ (Added missing semicolon)
+    key <AD10> { [ U1E25, U1E24 ] }; // ḥ Ḥ 
 
     // Home row
     key <AC01> { [ a, A ] };
@@ -70,7 +69,7 @@ xkb_symbols "custom" {
     key <AC03> { type="FOUR_LEVEL", [ d, D, U1E0D, U1E0C ] }; // d D ḍ Ḍ
     key <AC04> { [ f, F ] };
     key <AC05> { type="FOUR_LEVEL", [ g, G, U01E7, U01E6 ] }; // g G ǧ Ǧ
-    key <AC06> { [ h, H ] }; // Removed redundant FOUR_LEVEL type
+    key <AC06> { [ h, H ] }; 
     
     key <AC07> { [ j, J ] };
     key <AC08> { [ k, K ] };
@@ -93,6 +92,7 @@ xkb_symbols "custom" {
 };
 EOF
 
+
 # ── evdev.xml content ────────────────────────────────────────────────
 read -r -d '' RULES_CONTENT << 'EOF' || true
 <?xml version="1.0" encoding="UTF-8"?>
@@ -101,16 +101,16 @@ read -r -d '' RULES_CONTENT << 'EOF' || true
   <layoutList>
     <layout>
       <configItem>
-        <name>ber</name>
+        <name>tmz</name>
         <shortDescription>TMZ</shortDescription>
-        <description>Tamazight (QWERTY, Latin, Tamamerit)</description>
-        <languageList><iso639Id>ber</iso639Id></languageList>
+        <description>Tamazight</description>
+        <languageList><iso639Id>tmz</iso639Id></languageList>
       </configItem>
       <variantList>
         <variant>
           <configItem>
             <name>custom</name>
-            <description>Tamazight (Custom)</description>
+            <description>Tamazight (QWERTY, Latin, Tamamerit)</description>
           </configItem>
         </variant>
       </variantList>
@@ -119,12 +119,14 @@ read -r -d '' RULES_CONTENT << 'EOF' || true
 </xkbConfigRegistry>
 EOF
 
+
 # ════════════════════════════════════════════════════════════════════
 ok()   { echo -e "  ${G}✔${N}  $*"; }
 warn() { echo -e "  ${Y}⚠${N}  $*"; }
 err()  { echo -e "  ${R}✘${N}  $*"; }
 info() { echo -e "  ${C}→${N}  $*"; }
 sep()  { echo -e "  ${B}────────────────────────────────────────${N}"; }
+
 
 # Safely check if layout exists using Env Var to avoid quote issues
 gsettings_has_layout() {
@@ -134,6 +136,7 @@ gsettings_has_layout() {
     export TARGET_LAYOUT="$FULL_LAYOUT_ID"
     python3 -c "import ast, os; s=ast.literal_eval(os.environ['CURRENT_SOURCES']); print(any(t[1]==os.environ['TARGET_LAYOUT'] for t in s))" | grep -q True
 }
+
 
 cmd_install() {
     echo -e "\n${W}  Installing Tamazight layout…${N}"

@@ -12,21 +12,21 @@ The layout follows a **QWERTY base** and adds Tamazight-specific characters wher
 
 ### Key Mapping
 
-| Key | Unshifted | Shifted | Notes                  |
-| --- | --------- | ------- | ---------------------- |
-| `r` | `r`       | `R`     | AltGr: `ṛ` / `Ṛ`       |
-| `t` | `t`       | `T`     | AltGr: `ṭ` / `Ṭ`       |
-| `s` | `s`       | `S`     | AltGr: `ṣ` / `Ṣ`       |
-| `d` | `d`       | `D`     | AltGr: `ḍ` / `Ḍ`       |
-| `g` | `g`       | `G`     | AltGr: `ǧ` / `Ǧ`       |
-| `z` | `z`       | `Z`     | AltGr: `ẓ` / `Ẓ`       |
-| `c` | `c`       | `C`     | AltGr: `č` / `Č`       |
-| `o` | `ɛ`       | `Ɛ`     | Latin letter epsilon   |
-| `p` | `ḥ`       | `Ḥ`     | Emphatic H             |
-| `v` | `ɣ`       | `Ɣ`     | Voiced velar fricative |
-| `4` | `4`       | `ⵣ`     | Tifinagh Z (U+2D63)    |
-| `,` | `,`       | `«`     | French guillemet       |
-| `.` | `.`       | `»`     | French guillemet       |
+| Key | Unshifted | Shifted | Notes               |
+| --- | --------- | ------- | ------------------- |
+| `r` | `r`       | `R`     | AltGr: `ṛ` / `Ṛ`    |
+| `t` | `t`       | `T`     | AltGr: `ṭ` / `Ṭ`    |
+| `s` | `s`       | `S`     | AltGr: `ṣ` / `Ṣ`    |
+| `d` | `d`       | `D`     | AltGr: `ḍ` / `Ḍ`    |
+| `g` | `g`       | `G`     | AltGr: `ǧ` / `Ǧ`    |
+| `z` | `z`       | `Z`     | AltGr: `ẓ` / `Ẓ`    |
+| `c` | `c`       | `C`     | AltGr: `č` / `Č`    |
+| `o` | `ɛ`       | `Ɛ`     | -                   |
+| `p` | `ḥ`       | `Ḥ`     | -                   |
+| `v` | `ɣ`       | `Ɣ`     | -                   |
+| `4` | `4`       | `ⵣ`     | Tifinagh Z (U+2D63) |
+| `,` | `,`       | `«`     | French guillemet    |
+| `.` | `.`       | `»`     | French guillemet    |
 
 > **AltGr** = Right Alt key. Hold it while pressing a key to access the third/fourth level characters.
 
@@ -146,8 +146,6 @@ This script is GNOME-specific. For KDE, XFCE, or bare X11 setups, the XKB files 
 
 Issues, corrections to the key mappings, and compatibility reports from other distros are all welcome. Open an issue or submit a pull request.
 
-If you know of a better placement for `ɣ` or `ɛ`, genuinely — please open a discussion. These were judgment calls.
-
 ---
 
 ## License
@@ -156,4 +154,4 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-_Tamazight is spoken by tens of millions of Amazigh people across North Africa and the diaspora. This layout is a small attempt to make typing in Tamazight Latin script a little less friction-filled._
+_Made with love for Tamazight. ❤️ⵣ_
